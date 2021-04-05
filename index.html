@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <title>Frontend Mentor | [Blogr]</title>
+
+    <link rel='stylesheet' type='text/css' media='screen' href='default.css'>
+    <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    </style>
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="main.js"> </script>
+
+  <script>
+    $(document).ready(function(){
+        $("#menu-bar").click(2000, function(){
+      $("#desktop-view").hide();
+      $("#main-header").hide();
+      $(".mobile-navs").hide();
+      $("#mobile-tab").css("content-visibility","visible")
+    });
+
+
+     $("#one").click(function(){
+       $("#mobile1").toggle(1000, "linear");
+       $("this").toggle(
+         function(){
+           $("#product1").css("transform","rotate(180deg)")
+         }
+       )
+     });
+
+      $("#two").click(function () {
+        $("#mobile2").toggle(1000, "linear");
+      });
+
+      $("#three").click(function () {
+        $("#mobile3").toggle(1000, "linear");
+      });
+
+       $("#menu-bar2").click(2000, function(){
+          $("#desktop-view").show();
+         $("#main-header").show();
+         $(".mobile-navs").show();
+         $("#mobile-tab").css("content-visibility", "hidden")
+       });
+    
+     
+       $(".signup-link,#signup-link1,#signup-link2, #signup-link3").on("click", function () {
+        $("#signup-section").css("content-visibility", "visible");
+        $("#headertag").css("opacity", "0.3");
+        $("#first-article").css("opacity", "0.05");
+        $("#phone-section").css("opacity", "0.05");
+        $("#lastSection").css("opacity", "0.05");
+        $("#footerTag").css("opacity", "0.05");
+      });
+
+       
+      
+      $("#menu-bar3").on("click", function () {
+        $("#signup-section").css("content-visibility", "hidden");
+        $("#headertag").css("opacity", "1");
+        $("#first-article").css("opacity", "1");
+        $("#phone-section").css("opacity", "1");
+        $("#lastSection").css("opacity", "1");
+        $("#footerTag").css("opacity", "1");
+      });
+
+  
+
+
+
+
+
+
+
+    });
+       
+  </script>
+</head>
+<body>
+  <header >
+    <div id="headertag">
+<nav id="desktop-view">
+  <div id="nav-header">
+  
+    <div >
+    <h3 style="font-size:35px; font-weight:bold;padding-left:30px; transform:translateY(-20px);">Blogr  </h3>
+    </div>
+    <div  id="divs1">
+   
+    <div class="dropDown-nav">
+    <div class="arrows">Product<img id="product" src="images/icon-arrow-light.svg"></div><br><br>
+    <div class="droppeddown-nav">
+      <a href="#"> Overview</a><br />
+      <a href="#">Pricing</a><br />
+      <a href="#">Marketplace</a><br />
+      <a href="#"> Features</a><br />
+      <a href="#">Integrations</a>
+    </div>
+    
+    </div>
+    <div class="dropDown-nav">
+    <div class="arrows">Company<img id="company" src="images/icon-arrow-light.svg"></div><br><br>
+    <div class="droppeddown-nav">
+      <a href="#">About</a><br>
+      <a href="#">Team</a><br>
+      <a href="#">Blog</a><br>
+      <a href="#"> Careers</a>
+      </div>
+    </div>
+   <div class="dropDown-nav">
+    <div class="arrows"> Connect<img id="connect" src="images/icon-arrow-light.svg"></div><br><br>
+     <div class="droppeddown-nav">
+        <a href="#">Contact</a><br />
+        <a href="#">Newsletter</a><br />
+        <a href="#">LinkedIn</a>
+
+     </div>
+
+   
+  </div>
+  </div>
+
+  <div class="divs">
+    <a href="#"><div class="login1" id="signup-link1">Login</div></a>
+    <a href="#"><div class="login2"id="signup-link2">Sign Up</div></a>
+  </div>
+
+  <div id="menu-bar" style="cursor:pointer" >
+    <img id="ham1"src="images/icon-hamburger.svg"/>
+  </div>
+ 
+  </div>
+
+</nav>
+
+<section id="main-header">
+  <h1>A modern publishing platform</h1>
+    <h6> Grow your audience and build your online brand</h6>
+  <div id="flex-more">
+    <a href="#"><div class="more1" id="signup-link3">Start for Free</div></a>
+    <a href="#"><div class="more2">  Learn More</div></a>
+  </div>
+  </section>
+
+  <!--mobile navigation tab-->
+  <section id="mobile-tab" >
+    <div id="mobile-nav">
+      <div id="mobile-blogr">
+        <h3 style="font-size:35px; font-weight:bold;padding-left:30px; padding-top:20px;transform:translateY(-20px);">Blogr </h3>
+      </div>
+      <div id="menu-bar2" style="cursor:pointer">
+        <img id="ham2" src="images/icon-close.svg" />
+      </div>
+  </div>
+  <div id="new-div">
+  <div id="mobile-menu">
+    <div class="mobile-dropDownNav">
+    <div id="one" class="mobile-arrows">Product<img id="product1" src="images/icon-arrow-dark.svg"></div><br>
+    <div class="mobile-navs" id="mobile1">
+      <a href="#"> Overview</a><br />
+      <a href="#">Pricing</a><br />
+      <a href="#">Marketplace</a><br />
+      <a href="#"> Features</a><br />
+      <a href="#">Integrations</a>
+    </div>
+    
+    </div><br>
+    <div class="mobile-dropDownNav">
+      <div id="two" class="mobile-arrows">Company<img id="company1" src="images/icon-arrow-dark.svg"></div><br>
+      <div class="mobile-navs" id="mobile2">
+        <a href="#">About</a><br>
+        <a href="#">Team</a><br>
+        <a href="#">Blog</a><br>
+        <a href="#"> Careers</a>
+      </div>
+    </div><br>
+    <div class="mobile-dropDownNav">
+      <div id="three" class="mobile-arrows"> Connect<img id="connect1" src="images/icon-arrow-dark.svg"></div><br>
+      <div class="mobile-navs" id="mobile3">
+        <a href="#">Contact</a><br />
+        <a href="#">Newsletter</a><br />
+        <a href="#">LinkedIn</a>
+    
+      </div>
+    
+    
+    </div>
+    
+    
+    <div class="signup" >
+      <a href="#">
+        <div style="color:hsl(237, 23%, 32%); padding:10px 30px;margin:10px;" class="signup-link">Login</div>
+      </a>
+      <a href="#">
+        <div style=" background: linear-gradient(
+    90deg,
+    hsl(13, 100%, 72%) 0%,
+    hsl(353, 100%, 62%) 70%
+  );color:white;padding:10px 30px;border-radius:20px;width:80px;" class="signup-link">Sign Up</div>
+      </a>
+    </div>
+  </div>
+  </div>
+  </div>
+
+
+ 
+</div>
+
+</section>
+
+
+
+</header>
+
+<section id="signup-section">
+  <div id="signup-page">
+    <div id="menu-bar3" style="cursor:pointer">
+      <img id="ham3" src="images/icon-close.svg" />
+    </div>
+    <form>
+      <label for="email-address"> Email or Phone number</label><br>
+      <input type="email" id="email-address" required>
+      <br><br>
+      <input type="password" required placeholder="password"><br><br>
+
+    </form>
+    <button id="signIn">Sign In</button>
+    <div id="need-help">
+      <a href="#">Need help?</a><br><br>
+      <a href="#">New to Blogr? Sign up now</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <article id="first-article">
+
+   <h4 style="text-align: center; padding: 20px 0 0 0"> Designed for the future</h4>
+    <div class="right-article">
+   <h5>Introducing an extensible editor</h5>
+   <p> Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
+  The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, 
+  videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or 
+  change the looks of a blog.</p>
+
+   <h5>Robust content management</h5>
+   <p>Flexible content management enables users to easily move    through posts. Increase the usability of your blog 
+   by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.</p>
+  </div>
+  </article>
+  </section>
+  
+  <section id="phone-section">
+      <div id="phone2">
+        <div id="phone1">
+    <div id="left-text">
+    <h4>State of the Art Infrastructure</h4>
+  <p>With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
+  This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.</p>
+  </div>
+  </div>
+  </div>
+  </section><br><br>
+
+  <section id="lastSection">
+  <div id="lastSectionText">
+  <article id="lastArticle1">
+  <h4>Free, open, simple</h4>
+  <p>Blogr is a free and open source application backed by a large community of helpful developers. It supports 
+  features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, 
+  and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.</p>
+  </article>
+  <article id="lastArticle2">
+  <h4>Powerful tooling</h4>
+  <p>Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
+  capable of producing even the most complicated sites.</p>
+   </article>
+  </div>
+  </section>
+
+<footer>
+  <div id="footerTag">
+    <div><h2>Blogr</h2></div>
+
+  <div class="footerflex">
+  <h6>Product</h6>
+    <a href="#"> Overview</a><br>
+    <a href="#"> Pricing<br>
+    <a href="#"> Marketplace</a><br>
+    <a href="#"> Features</a><br>
+    <a href="#">Integrations</a><br>
+  </div>
+
+  <div class="footerflex">
+  <h6> Company</h6>
+
+    <a href="#">About</a><br>
+    <a href="#">Team</a><br>
+    <a href="#"> Blog</a><br>
+    <a href="#">Careers</a><br>
+  </div>
+  <div class="footerflex">
+<h6> Connect</h6>
+  
+    <a href="#"> Contact</a><br>
+    <a href="#"> Newsletter</a><br>
+    <a href="#">LinkedIn</a><br>
+  </div>
+</div>
+  </footer>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Olajumoke Boladale-Lawal</a>.
+  </div>
+</body>
+</html>
