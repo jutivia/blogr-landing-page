@@ -2,19 +2,33 @@ console.log("i'm in")
 
 
 
-//removing the drop down nav bar at desktop resolution
-//attempt:101
-//progress:-10%
+// removing the drop down nav bar at desktop resolution
+// attempt:150
+// progress:it finally works!
+var clicked=0
+function clickedTab(){
+   return clicked++;
+
+}
 
 function closeTab(x){
-   ham2.click()=false;
-    if (x.matches ){
-        ham2.click()= true;
+    clickedTab();
+    if (x.matches && clicked>=0){
+        document.getElementById("menu-bar2").click();
         console.log("the screen is laptop resolution");
     }
-}
- var ham2= document.getElementById("menu-bar2") 
-var x= window.matchMedia("(min-width:850px)")
 
-closeTab(x);
-x.addListener(closeTab);
+}
+ function ifWindow(){
+     if (window.innerWidth>=850){
+         closeTab(x)
+          
+     }
+ }
+var x= window.matchMedia("(min-width:850px)")
+ x.addListener(closeTab);
+
+
+window.onload= function(){closeTab(x)};
+ifWindow();
+

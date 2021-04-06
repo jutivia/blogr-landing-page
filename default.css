@@ -296,19 +296,22 @@ footer a {
   top: 150px;
   z-index: 2;
   width: 70%;
-  max-width: 500px;
+  max-width: 400px;
 }
 #menu-bar3 {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
   width: 15px;
   height: 15px;
 }
+#signup-page input::placeholder {
+  margin: 10px 10px;
+}
 #signup-page input {
   height: 35px;
-  border-radius: 10px;
+  border-radius: 20px;
   width: 300px;
 }
 #signup-page label {
@@ -319,6 +322,11 @@ footer a {
 #signup-page input:focus {
   border: 3px solid hsl(13, 100%, 72%);
 }
+.stayysigned {
+  width: 5px;
+  height: 5px;
+  margin: 0;
+}
 #signIn {
   width: 100px;
   height: 35px;
@@ -328,6 +336,7 @@ footer a {
     hsl(13, 100%, 72%) 0%,
     hsl(353, 100%, 62%) 70%
   );
+  width: 90px;
   border: none;
   color: white;
   margin-top: 20px;
@@ -344,7 +353,7 @@ footer a {
 }
 
 #mobile-tab {
-  content-visibility: hidden;
+  transform: scale(0);
 }
 
 @media screen and (max-width: 1440px) {
@@ -460,6 +469,7 @@ footer a {
   }
   #mobile-tab {
     display: block;
+    transform: scale(1);
   }
 
   #mobile-nav {

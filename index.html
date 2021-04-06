@@ -44,21 +44,27 @@
         $("#mobile3").toggle(1000, "linear");
       });
 
-       $("#menu-bar2").click(2000, function(){
-          $("#desktop-view").show();
-         $("#main-header").show();
-         $(".mobile-navs").show();
-         $("#mobile-tab").css("content-visibility", "hidden")
-       });
+    // if ($(window).width()>850){
+       
+    //   $("#menu-bar2").click();
+    // }
     
+    
+        $("#menu-bar2").click(2000, function () {
+          $("#desktop-view").show();
+          $("#main-header").show();
+          $(".mobile-navs").show();
+          $("#mobile-tab").css("content-visibility", "hidden")
+        });
+      
      
        $(".signup-link,#signup-link1,#signup-link2, #signup-link3").on("click", function () {
         $("#signup-section").css("content-visibility", "visible");
-        $("#headertag").css("opacity", "0.3");
-        $("#first-article").css("opacity", "0.05");
-        $("#phone-section").css("opacity", "0.05");
-        $("#lastSection").css("opacity", "0.05");
-        $("#footerTag").css("opacity", "0.05");
+        $("#headertag").css("opacity", "0.2");
+        $("#first-article").css("opacity", "0.2");
+        $("#phone-section").css("opacity", "0.2");
+        $("#lastSection").css("opacity", "0.2");
+        $("#footerTag").css("opacity", "0.2");
       });
 
        
@@ -156,7 +162,7 @@
       <div id="mobile-blogr">
         <h3 style="font-size:35px; font-weight:bold;padding-left:30px; padding-top:20px;transform:translateY(-20px);">Blogr </h3>
       </div>
-      <div id="menu-bar2" style="cursor:pointer">
+      <div id="menu-bar2" onclick="clickedTab()" style="cursor:pointer">
         <img id="ham2" src="images/icon-close.svg" />
       </div>
   </div>
@@ -220,17 +226,23 @@
 
 
 </header>
-
+<!-- signup/signin pop up -->
 <section id="signup-section">
   <div id="signup-page">
     <div id="menu-bar3" style="cursor:pointer">
       <img id="ham3" src="images/icon-close.svg" />
     </div>
+    <div style="text-align:center;color:white"><h2>Blogr</h2></div>
     <form>
-      <label for="email-address"> Email or Phone number</label><br>
-      <input type="email" id="email-address" required>
+      
+      <input type="email" id="email-address" placeholder="  Email or username"required>
       <br><br>
-      <input type="password" required placeholder="password"><br><br>
+      <input type="password" required placeholder="  password"><br><br>
+      <!-- <label for="staysigned">stay signed
+      <input type="checkbox" id="staysigned">
+      <span class="stayysigned"></span>
+      in</label><br> -->
+       
 
     </form>
     <button id="signIn">Sign In</button>
